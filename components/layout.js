@@ -1,9 +1,11 @@
 import Header from './header';
 
 const Layout = (props) => (
-  <div>
+  <div className='main-container'>
     <Header />
-    {props.children}
+    <div className='body-content'>
+      {props.children}
+    </div>
   </div>
 );
 

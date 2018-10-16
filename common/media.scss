@@ -1,0 +1,8 @@
+$TabletWidth: 480px;
+$DesktopWidth: 840px;
+
+$Tablet: screen and (min-width: $TabletWidth);
+$Desktop: screen and (min-width: $DesktopWidth);
+
+$TillTablet: screen and (max-width: $TabletWidth - 1);
+$TillDesktop: screen and (max-width: $DesktopWidth - 1);
