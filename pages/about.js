@@ -1,7 +1,6 @@
 import Layout from '../components/layout';
 import {withRouter} from 'next/router';
 import ReactMarkdown from 'react-markdown';
-import './about.scss';
 
 const input = `
 About

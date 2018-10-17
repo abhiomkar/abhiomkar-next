@@ -1,5 +1,4 @@
 import Layout from '../components/layout';
-import './index.scss';
 
 const Home = () => (
   <Layout>

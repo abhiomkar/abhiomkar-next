@@ -2,7 +2,6 @@ import Layout from '../components/layout';
 import firebase from 'firebase/app';
 import 'firebase/database';
 import React from 'react';
-import './photography.scss'
 
 class Photography extends React.Component {
   state = {
@@ -41,7 +40,7 @@ class Photography extends React.Component {
     <Layout fullWidth>
       <div className='container photography-container'>
         <div className='content-wrapper'>
-          <h1 className='title'>Photography</h1>
+          <h1 className='photography-title'>Photography</h1>
 
           {/* gallery navigation list */}
           <div className='category-nav'>

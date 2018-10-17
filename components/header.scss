@@ -197,26 +197,3 @@
     visibility: visible;
   }
 }
-
-.body-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-  &.full-width {
-    max-width: none;
-  }
-}
-
-.container {
-  max-width: $contentWidth;
-}
-
-.main-container, .main-content {
-  height: 100vh;
-}
-
-.main-container.is-dark {
-  background: #141414;
-}

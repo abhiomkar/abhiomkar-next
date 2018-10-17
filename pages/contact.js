@@ -1,7 +1,6 @@
 import React from 'react';
 import axios from 'axios';
 import Layout from '../components/layout';
-import './contact.scss';
 
 const MAILGUN_API_URL =
     'https://us-central1-abhiomkar-in.cloudfunctions.net/sendMail';
@@ -94,7 +93,7 @@ class Contact extends React.Component {
                   </a>
                   <a className='twitter-link social-link' href='https://twitter.com/abhiomkar'>
                     <svg className='twitter-logo' version='1.1' id='White' xmlns='http://www.w3.org/2000/svg' x='0px' y='0px'
-                      viewBox='0 0 400 400' style={{'enable-background': 'new 0 0 400 400'}}>
+                      viewBox='0 0 400 400' style={{enableBackground: 'new 0 0 400 400'}}>
                       <path className='st0' d='M400,200c0,110.5-89.5,200-200,200S0,310.5,0,200S89.5,0,200,0S400,89.5,400,200z M163.4,305.5
                         c88.7,0,137.2-73.5,137.2-137.2c0-2.1,0-4.2-0.1-6.2c9.4-6.8,17.6-15.3,24.1-25c-8.6,3.8-17.9,6.4-27.7,7.6
                         c10-6,17.6-15.4,21.2-26.7c-9.3,5.5-19.6,9.5-30.6,11.7c-8.8-9.4-21.3-15.2-35.2-15.2c-26.6,0-48.2,21.6-48.2,48.2

@@ -1,9 +1,8 @@
 import Layout from '../components/layout';
-import './projects.scss';
 
 const Project = (props) => (
   <Layout>
-    <div className='container'>
+    <div className='container project-container'>
       <h1 className='title'>Projects</h1>
       {props.projects.map((project) => {
         return (<ProjectCard project={project} key={project.url}></ProjectCard>);
