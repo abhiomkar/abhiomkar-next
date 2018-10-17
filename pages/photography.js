@@ -1,35 +1,66 @@
 import Layout from '../components/layout';
 import firebase from 'firebase/app';
 import 'firebase/database';
-// import fetch from 'isomorphic-unfetch';
+import React from 'react';
+import './photography.scss'
 
-const Photography = (props) => (
-  <Layout>
-    <div>This is photography</div>
-    {props.data.map((category) => {
-      return category.photo_urls.map((photoUrl) => {
-        return (<img src={photoUrl} />);
-      });
-    })}
-  </Layout>
-);
-
-Photography.getInitialProps = async () => {
-  const config = {
-    databaseURL: 'https://abhiomkar-in.firebaseio.com',
+class Photography extends React.Component {
+  state = {
+    activeCategoryIndex: 0,
   };
-  if (!firebase.apps.length) {
-    firebase.initializeApp(config);
+
+  static async getInitialProps() {
+    const config = {
+      databaseURL: 'https://abhiomkar-in.firebaseio.com',
+    };
+    if (!firebase.apps.length) {
+      firebase.initializeApp(config);
+    }
+    const db = firebase.database();
+    let data = [];
+    await db.ref('/').once('value').then((snapshot) => {
+      data = snapshot.val();
+    });
+    return {
+      data: data,
+    };
   }
-  const db = firebase.database();
-  let data = [];
-  await db.ref('/').once('value').then((snapshot) => {
-    data = snapshot.val();
-    // console.log(data);
-  });
-  return {
-    data: data,
-  };
-};
+
+  setCategoryActive(activeCategoryIndex) {
+    this.setState({activeCategoryIndex});
+  }
+
+  renderCategoryNavItem(categoryName, index) {
+    const isSelectedClass = index === this.state.activeCategoryIndex ? 'is-selected' : '';
+    return (<a key={categoryName} onClick={() => this.setCategoryActive(index)}
+        className={`category-link ${isSelectedClass}`}>{categoryName}</a>);
+  }
+
+  render() {
+    return (
+    <Layout fullWidth>
+      <div className='container photography-container'>
+        <div className='content-wrapper'>
+          <h1 className='title'>Photography</h1>
+
+          {/* gallery navigation list */}
+          <div className='category-nav'>
+            {this.props.data.map((category, index) => this.renderCategoryNavItem(category.name, index))}
+          </div>
+
+          {/* photo list */}
+          <div className='gallery-list'>
+            {this.props.data[this.state.activeCategoryIndex].photo_urls.map((photoUrl) => {
+              return (<div className='photo-container' key={photoUrl}>
+                        <img src={photoUrl} className='photo' />
+                      </div>);
+            })}
+          </div>
+        </div>
+      </div>
+    </Layout>
+    );
+  }
+}
 
 export default Photography;

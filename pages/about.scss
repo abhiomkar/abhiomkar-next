@@ -1,0 +1,27 @@
+@import '../common/color.scss';
+@import '../common/variable.scss';
+
+.about-container {
+  font-size: 16px;
+  color: $blackAlpha84;
+  padding-bottom: 15px;
+  padding: 0 12px;
+  max-width: $contentWidth;
+  margin: 12px auto 0 auto;
+}
+
+a {
+  color: rgba(0, 0, 0, 0.75);
+}
+
+h2 {
+  margin: 50px 0 20px 0;
+}
+
+ul {
+  padding-left: 12px;
+
+  li {
+    line-height: 1.8;
+  }
+}

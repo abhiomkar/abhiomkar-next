@@ -1,0 +1,78 @@
+@import '../common/variable.scss';
+@import '../common/media.scss';
+
+.photography-container {
+  margin: 0 auto;
+  padding-bottom: 20px;
+  background: #141414;
+  color: #fff;
+  max-width: none;
+  width: 100%;
+}
+
+.title {
+  color: #fff;
+  font-size: 24px;
+  font-weight: 300;
+  margin: 0 auto;
+  width: 100%;
+  padding: 18px 8px;
+}
+
+.category-nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 0 12px 8px;
+}
+
+.category-link {
+  color: rgba(255, 255, 255, 0.4);
+  margin: 8px 12px 8px 0;
+  cursor: pointer;
+}
+
+.category-link:hover, .category-link.is-selected {
+  color: #fff;
+}
+
+.gallery-list {
+  position: relative;
+}
+
+.gallery {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto 22px auto;
+  display: none;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.gallery.is-visible {
+  display: block;
+  opacity: 1;
+}
+
+.gallery.display-none {
+  display: none;
+}
+
+.photo-container {
+  padding: 0 8px 4px 8px;
+  width: 100%;
+}
+
+.photo {
+  width: 100%;
+  border-radius: 2px;
+}
+
+@media #{$Tablet} {
+  .content-wrapper {
+    max-width: $containerWidth;
+    margin: 0 auto;
+  }
+}
