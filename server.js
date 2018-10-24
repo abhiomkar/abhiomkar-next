@@ -1,29 +1,32 @@
-const express = require('express');
 const next = require('next');
+const {createServer} = require('http');
+const {join} = require('path');
+const {parse} = require('url');
 
+const port = parseInt(process.env.PORT, 10) || 3000
 const dev = process.env.NODE_ENV !== 'production';
 const app = next({dev});
 
 const handle = app.getRequestHandler();
 
 app.prepare()
-.then(() => {
-  const server = express();
-
-  server.get('/a/:name', (req, res) => {
-    app.render(req, res, '/about', {name: req.params.name});
+  .then(() => {
+    createServer((req, res) => {
+        const parsedUrl = parse(req.url, true);
+        const rootStaticFiles = [
+          '/robots.txt',
+          '/sitemap.xml',
+          '/favicon.ico'
+        ];
+        if (rootStaticFiles.indexOf(parsedUrl.pathname) > -1) {
+          const path = join(__dirname, 'static', parsedUrl.pathname);
+          app.serveStatic(req, res, path);
+        } else {
+          handle(req, res, parsedUrl);
+        }
+      })
+      .listen(port, (err) => {
+        if (err) throw err;
+        console.log(`> Ready on http://localhost:${port}`);
+      })
   });
-
-  server.get('*', (req, res) => {
-    return handle(req, res);
-  });
-
-  server.listen(3000, (err) => {
-    if (err) throw err;
-    console.log('> Ready on http://localhost:3000');
-  });
-})
-.catch((ex) => {
-  console.error(ex.stack);
-  process.exit(1);
-});
