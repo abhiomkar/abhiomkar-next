@@ -33,7 +33,6 @@ html, body {
   background: #f9f9f9;
 }
 
-
 h1 {
  font-size: 24px;
  margin: 22px 0 18px 0;
@@ -281,46 +280,6 @@ textarea {
   font-size: 14px;
   outline: 0;
   border: 0;
-}
-
-.flat-colored-button {
-  background: #4285F4;
-  text-transform: uppercase;
-  color: #fff;
-  border: 0;
-  font-weight: bold;
-  font-size: 13px;
-  border-radius: 2px;
-  height: 32px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-width: 84px;
-  outline: 0;
-  transition: all 0.35 ease-in-out;
-  cursor: pointer;
-  box-shadow: $elevation_1dp;
-  text-align: center;
-}
-
-.flat-colored-button[disabled] {
-  background: #F5F5F5;
-  color: #9E9E9E;
-  box-shadow: none;
-}
-
-.flat-colored-button:focus {
-  background: #3367D6;
-}
-
-.flat-colored-button:active {
-  box-shadow: $elevation_6dp;
-  background: #3367D6;
-}
-
-.flat-colored-button.disabled {
-  color: $blackAlpha80;
-  background: $blackAlpha20;
 }
 
 /* fixes auto zoom on focus on form inputs in iOS */

@@ -1,3 +1,5 @@
+$mdc-theme-primary: #4285F4;
+@import '@material/react-button/index.scss';
 @import "../common/color.scss";
 @import "../common/variable.scss";
 @import "../common/shadow.scss";
@@ -133,6 +135,10 @@
     position: absolute;
     bottom: 8px;
     right: 8px;
+    min-width: 100px;
+    font-family: system-ui;
+    font-weight: 700;
+    font-size: 13px;
   }
 
   .send-icon {

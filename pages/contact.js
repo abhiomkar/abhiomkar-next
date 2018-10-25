@@ -1,6 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import Layout from '../components/layout';
+import Button from '@material/react-button';
 
 const MAILGUN_API_URL =
     'https://us-central1-abhiomkar-in.cloudfunctions.net/sendMail';
@@ -141,12 +142,11 @@ class Contact extends React.Component {
                     onChange={(e) => this.handleInputChange(e)}
                     value={this.state.contactBody}>
                 </textarea>
-              <button id='contact-send-button'
-                aria-label='Send email action button'
-                className='flat-colored-button form-submit-button'
+              <Button raised aria-label='Send email action button'
+                className='form-submit-button'
                 disabled={this.state.inProgress}>
                 {this.state.inProgress ? 'Sending' : 'Send' }
-              </button>
+              </Button>
             </div>
           </form>
         </div>

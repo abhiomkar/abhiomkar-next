@@ -25,6 +25,7 @@ const Layout = (props) => (
 );
 
 import './layout.scss';
+
 import '../pages/index.scss';
 import '../pages/projects.scss';
 import '../pages/photography.scss';
