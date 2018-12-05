@@ -37,6 +37,13 @@ const projectList = [{
     name: 'chessboard-io',
   },
   {
+    url: 'https://github.com/abhiomkar/portfoliojs',
+    description: 'jQuery plugin for your beautiful portfolio images with ' +
+        'horizontal scrolling',
+    name: 'portfoliojs',
+    homepage: 'http://portfoliojs.com/',
+  },
+  {
     url: 'https://github.com/abhiomkar/pip-save',
     description: 'bringing npm like behavior to pip including init & save',
     name: 'pip-save',
@@ -79,11 +86,10 @@ const projectList = [{
     homepage: 'http://abhiomkar.github.io/pingpong-app/',
   },
   {
-    url: 'https://github.com/abhiomkar/portfoliojs',
-    description: 'jQuery plugin for your beautiful portfolio images with ' +
-        'horizontal scrolling',
-    name: 'portfoliojs',
-    homepage: 'http://portfoliojs.com/',
+    url: 'https://github.com/abhiomkar/gallerly.js',
+    description: 'Google Images like photo gallery with pure JavaScript',
+    name: 'gallery.js',
+    homepage: 'http://gallery-js.now.sh/',
   },
 ];
 
