@@ -62,7 +62,6 @@ class Header extends React.Component {
           {this.renderNavItem('/projects', 'Projects')}
           {this.renderNavItem('http://blog.abhiomkar.in', 'Blog')}
           {this.renderNavItem('/photography', 'Photography')}
-          {this.renderNavItem('/about', 'About')}
           {this.renderNavItem('/contact', 'Contact')}
         </div>
       </div>

@@ -4,7 +4,7 @@ $mdc-theme-primary: #4285F4;
 @import "../common/variable.scss";
 @import "../common/shadow.scss";
 
-.container {
+.contact-container {
   height: 100%;
   width: 100%;
   font-size: 15px;
@@ -18,7 +18,7 @@ $mdc-theme-primary: #4285F4;
   }
 
   .contact-card {
-    max-width: 480px;
+    max-width: 576px;
     margin: 35px auto 0;
 
     a {

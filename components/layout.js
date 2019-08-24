@@ -29,6 +29,5 @@ import './layout.scss';
 import '../pages/index.scss';
 import '../pages/projects.scss';
 import '../pages/photography.scss';
-import '../pages/about.scss';
 import '../pages/contact.scss';
 export default Layout;

@@ -1,5 +1,29 @@
+@import '../common/color.scss';
+@import '../common/variable.scss';
+
 .home-container {
-  padding: 20px 12px;
-  font-weight: 400;
-  color: rgba(0, 0, 0, .54);
+  font-size: 16px;
+  padding-bottom: 15px;
+  max-width: $contentWidth;
+  margin: 32px auto 0 auto;
+  padding: 0 8px 48px 8px;
+
+  h2 {
+    margin: 28px 0 20px 0;
+    font-weight: 700;
+    font-size: 1.2rem;
+    letter-spacing: -0.018em;
+  }
+
+  ul {
+    padding-left: 12px;
+
+    li {
+      line-height: 1.8;
+    }
+  }
+
+  p {
+    font-size: 15px;
+  }
 }

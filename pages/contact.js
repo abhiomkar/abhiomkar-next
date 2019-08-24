@@ -71,7 +71,7 @@ class Contact extends React.Component {
   render() {
     return (
     <Layout>
-      <div className='container'>
+      <div className='container contact-container'>
       <div className='content'>
         <div className='contact-card paper-card'>
           <div className='profile-container'>
