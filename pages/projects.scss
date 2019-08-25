@@ -3,9 +3,10 @@
 @import '../common/media.scss';
 @import '../common/color.scss';
 @import '../common/variable.scss';
+@import '../common/typography';
 
 .item {
-  margin: 10px 6px;
+  margin: 10px 8px;
   box-shadow: $elevation_2dp;
   border-radius: 2px;
   transition: all .28s $easeInOut;
@@ -92,12 +93,12 @@
 
 .project-container {
   padding-bottom: 50px;
-  padding-top: 12px;
+  padding-top: 0;
 }
 
 .title {
-  font-size: 24px;
-  font-weight: 300;
+  @include typography-headline1;
+
   margin-left: 8px;
 }
 

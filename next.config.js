@@ -4,4 +4,5 @@ module.exports = withSass({
   sassLoaderOptions: {
     includePaths: ["./node_modules"],
   },
+  target: 'serverless',
 });

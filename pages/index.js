@@ -2,11 +2,10 @@ import Layout from '../components/layout';
 import ReactMarkdown from 'react-markdown';
 
 const markdown = `
-I'm **Abhinay Omkar**, currently based in New York, New York.
-
-I previously worked at Bangalore, India and Chennai, India.
-I was born in Andhra Pradesh, India and studied Computer Science of Engineering
-at _Koneru Lakshmaiah College of Engineering_ near Vijayawada, India.
+I'm **Abhinay Omkar**, currently based in New York City (Previously worked
+at Bangalore, India and Chennai, India). I was born in Andhra Pradesh, India and
+studied Computer Science of Engineering at _Koneru Lakshmaiah College of
+Engineering_ near Vijayawada, India.
 
 Work
 ----
@@ -22,6 +21,8 @@ I believe writing good code is as important as a good design. My strengths are
 Javascript & Python. See my work and open source contribution at
 [Github](https://github.com/abhiomkar).
 
+See [/projects](/projects) for my little hacks.
+
 Photography
 -----------
 
@@ -30,7 +31,7 @@ Portraits, Travel & Nature. I started my own venture as a part-time freelancer
 in creative candid wedding photography 4 years ago. I shot weddings of various
 traditions all over india including simple and big fat weddings.
 
-See some of my best work at [/photography](/photography).
+See photo gallery at [/photography](/photography).
 
 I love to travel and explore new places, I take photos to make world look
 beautiful. I design & code to make the world a better place. :)
