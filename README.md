@@ -2,13 +2,20 @@
 
 ## Deploy
 
-Preview deploy
+Push changes to GitHub for deploying to prod:
 
 ```
-vercel
+git commit -am "changes"
+git push origin HEAD # deploys to prod
 ```
 
-## Deploy to prod
+Preview deploy before pushing changes:
+
+```
+npx vercel
+```
+
+You can also deploy to prod without pushing to GitHub:
 
 ```
 vercel --prod
