@@ -1,5 +1,5 @@
-@import '../common/variable.scss';
-@import '../common/media.scss';
+@use '../common/variable.scss';
+@use '../common/media.scss';
 
 .photography-container {
   margin: 0 auto;
@@ -71,9 +71,9 @@
   border-radius: 2px;
 }
 
-@media #{$Tablet} {
+@media screen and (min-width: media.$TabletWidth) {
   .content-wrapper {
-    max-width: $containerWidth;
+    max-width: variable.$containerWidth;
     margin: 0 auto;
   }
 }

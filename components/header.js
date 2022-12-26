@@ -1,7 +1,6 @@
 import Link from 'next/link';
 import React from 'react';
 import {withRouter} from 'next/router';
-import './header.scss';
 
 class Header extends React.Component {
   state = {
@@ -14,8 +13,8 @@ class Header extends React.Component {
 
   renderNavItem(href, label) {
     return (
-      <Link href={href}>
-        <a className={`nav-item ${this.isActive(href)}`}>{label}</a>
+      <Link href={href} className={`nav-item ${this.isActive(href)}`}>
+        {label}
       </Link>
     );
   }

@@ -1,6 +1,6 @@
 import Layout from '../components/layout';
-import firebase from 'firebase/app';
-import 'firebase/database';
+import {initializeApp, getApps} from 'firebase/app';
+import {getDatabase, ref, get} from 'firebase/database';
 import React from 'react';
 
 class Photography extends React.Component {
@@ -12,16 +12,12 @@ class Photography extends React.Component {
     const config = {
       databaseURL: 'https://abhiomkar-in.firebaseio.com',
     };
-    if (!firebase.apps.length) {
-      firebase.initializeApp(config);
-    }
-    const db = firebase.database();
-    let data = [];
-    await db.ref('/').once('value').then((snapshot) => {
-      data = snapshot.val();
-    });
+    const app = getApps().length ? getApps()[0] : initializeApp(config);
+    const db = getDatabase(app);
+    const snapshot = await get(ref(db, '/'));
+
     return {
-      data: data,
+      data: snapshot.val(),
     };
   }
 

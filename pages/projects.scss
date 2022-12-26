@@ -1,15 +1,15 @@
-@import '../common/shadow.scss';
-@import '../common/transition.scss';
-@import '../common/media.scss';
-@import '../common/color.scss';
-@import '../common/variable.scss';
-@import '../common/typography';
+@use '../common/shadow';
+@use '../common/transition';
+@use '../common/media';
+@use '../common/color';
+@use '../common/variable';
+@use '../common/typography';
 
 .item {
   margin: 10px 8px;
-  box-shadow: $elevation_2dp;
+  box-shadow: shadow.$elevation_2dp;
   border-radius: 2px;
-  transition: all .28s $easeInOut;
+  transition: all .28s transition.$easeInOut;
   background: #fff;
 
   a {
@@ -18,12 +18,12 @@
 }
 
 .item:hover {
-  box-shadow: $elevation_6dp;
+  box-shadow: shadow.$elevation_6dp;
 }
 
 .item-body {
   padding: 25px 25px 0 25px;
-  border-bottom: 1px solid $blackAlpha10;
+  border-bottom: 1px solid color.$blackAlpha10;
   cursor: pointer;
   position: relative;
   display: block;
@@ -36,7 +36,7 @@
   top: 12px;
   display: flex;
   align-items: center;
-  color: $blackAlpha60;
+  color: color.$blackAlpha60;
 }
 
 .star-icon {
@@ -46,7 +46,7 @@
 }
 
 .item-name {
-  color: $blackAlpha80;
+  color: color.$blackAlpha80;
   font-size: 17px;
   font-weight: 500;
   display: inline-block;
@@ -57,7 +57,7 @@
 }
 
 .item-description {
-  color: $blackAlpha60;
+  color: color.$blackAlpha60;
   font-size: 14px;
   line-height: 48px;
   white-space: nowrap;
@@ -73,18 +73,20 @@
 }
 
 .item-action-button {
-  color: $blackAlpha50;
+  color: color.$blackAlpha50;
   font-weight: 500;
   font-size: 14px;
   margin: 0 10px;
 }
 
 .item-action-button:hover {
-  color: $blackAlpha80;
+  color: color.$blackAlpha80;
 }
 
-@media screen and (--Tablet) {
-  max-width: $contentWidth;
+@media screen and (min-width: media.$TabletWidth) {
+  .item {
+    max-width: variable.$contentWidth;
+  }
 
   .item {
     margin: 20px 6px;
@@ -97,13 +99,13 @@
 }
 
 .title {
-  @include typography-headline1;
+  @include typography.typography-headline1;
 
   margin-left: 8px;
 }
 
 .view-all-link {
-  color: $blackAlpha60;
+  color: color.$blackAlpha60;
   font-size: 14px;
   display: flex;
   justify-content: flex-end;
@@ -113,7 +115,7 @@
 }
 
 .view-all-link:hover {
-  color: $blackAlpha80;
+  color: color.$blackAlpha80;
 }
 
 .view-all-icon {

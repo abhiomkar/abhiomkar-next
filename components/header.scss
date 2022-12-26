@@ -1,6 +1,6 @@
+@use '../common/media.scss';
 @import '../common/shadow.scss';
 @import '../common/transition.scss';
-@import '../common/media.scss';
 @import '../common/color.scss';
 @import '../common/variable.scss';
 
@@ -12,7 +12,7 @@
   justify-content: center;
 }
 
-@media #{$TillDesktop} {
+@media screen and (max-width: media.$DesktopWidth - 1) {
   .main-header {
     justify-content: flex-start;
   }
@@ -30,7 +30,7 @@
   background: #fff;
 }
 
-@media #{$TillDesktop} {
+@media screen and (max-width: media.$DesktopWidth - 1) {
   .header-bar {
     width: 100%;
   }
@@ -44,7 +44,7 @@
   outline: 0;
 }
 
-@media #{$Desktop} {
+@media screen and (min-width: media.$DesktopWidth) {
   .menu {
     display: none;
   }
@@ -136,13 +136,13 @@
   color: $blackAlpha90;
 }
 
-@media #{$Desktop} {
+@media screen and (min-width: media.$DesktopWidth) {
   .main-title {
     margin-left: 14px;
   }
 }
 
-@media #{$Desktop} {
+@media screen and (min-width: media.$DesktopWidth) {
   .horizontal-nav {
     white-space: nowrap;
     display: flex;
@@ -165,7 +165,7 @@
   }
 }
 
-@media #{$TillDesktop} {
+@media screen and (max-width: media.$DesktopWidth - 1) {
   .horizontal-nav {
     position: absolute;
     width: 100%;
