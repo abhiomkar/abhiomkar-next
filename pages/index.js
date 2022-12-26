@@ -39,7 +39,7 @@ beautiful. I design & code to make the world a better place. :)
 
 const Home = () => (
   <Layout>
-    <section className='container'>
+    <section className='container' data-deploy-version-check="1">
       <div className='home-container'>
         <ReactMarkdown children={markdown} />
       </div>
