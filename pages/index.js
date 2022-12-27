@@ -2,7 +2,7 @@ import Layout from '../components/layout';
 import ReactMarkdown from 'react-markdown';
 
 const markdown = `
-I'm **Abhinay Omkar**, based in Bangalore (Previously worked
+My name is **Abhinay Omkar**. I'm an Indian he/him living in Bangalore, India (Previously worked
 at New York City and Chennai). I was born in Telangana, India and
 studied Computer Science of Engineering at _Koneru Lakshmaiah College of
 Engineering_ near Vijayawada, India.
