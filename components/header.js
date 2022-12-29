@@ -59,7 +59,7 @@ class Header extends React.Component {
         <div className={this.horizontalNavClasses()} onClick={() => this.toggleMenu()}>
           {this.renderNavItem('/', 'Home')}
           {this.renderNavItem('/projects', 'Projects')}
-          {this.renderNavItem('http://blog.abhiomkar.in', 'Blog')}
+          {this.renderNavItem('https://abhiomkar.medium.com', 'Blog')}
           {this.renderNavItem('/photography', 'Photography')}
           {this.renderNavItem('/contact', 'Contact')}
         </div>
